@@ -29,15 +29,9 @@ const App = () => {
   let [nextBackground, selectNextBackground] = useState({ background: "" })
 
 
-      const updateSelectionStyle = (nextBackground) => {
-      this.setState({ selectionStyle: { background: nextBackground } });
-    };
-
-
-
-  useEffect(() => {
-    console.log(nextBackground);
-  }, [nextBackground]);
+  // useEffect(() => {
+  //   console.log(nextBackground);
+  // }, [nextBackground]);
   
   return (
     <div id="master">
@@ -52,7 +46,6 @@ const App = () => {
       <div className='row' id="children-wrapper">
         {
           ["selection1", "selection2", "selection3"].map(key => (
-            // console.log("Key value:", key);
             <Selection
               key={key}
               id={key}
